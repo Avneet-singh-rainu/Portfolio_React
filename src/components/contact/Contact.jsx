@@ -1,7 +1,8 @@
 import { useRef, useState } from "react";
 import "./contact.scss";
 import { motion, useInView } from "framer-motion";
-import emailjs from "@emailjs/browser";
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
 const variants = {
   initial: {
@@ -32,6 +33,14 @@ const Contact = () => {
     console.log("email sent");
 
   };
+
+    const showToastMessage = (e) => {
+          e.preventDefault();
+
+      toast.success("Mail Sent !", {
+        position: toast.POSITION.TOP_RIGHT,
+      });
+    };
 
   return (
     <motion.div
@@ -88,7 +97,7 @@ const Contact = () => {
         </motion.div>
         <motion.form
           ref={formRef}
-          onSubmit={sendEmail}
+          onSubmit={showToastMessage}
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}
           transition={{ delay: 4, duration: 1 }}
@@ -101,6 +110,7 @@ const Contact = () => {
           {success && "Success"}
         </motion.form>
       </div>
+      <ToastContainer />
     </motion.div>
   );
 };
