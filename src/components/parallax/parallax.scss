@@ -1,0 +1,35 @@
+.parallax{
+    overflow: hidden;
+    height: 100%;
+    width: 100%;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+  
+h1{
+    font-size: 50px;
+    color: orange;
+}
+
+    img{
+        object-fit: cover;
+    }
+
+    .mountains{
+        position: absolute;
+        z-index: 3;
+    }
+
+      .planets{
+        position: absolute;
+        z-index: 2;
+    }
+
+      .stars{
+        position: absolute;
+        z-index: 1;
+    }
+
+}

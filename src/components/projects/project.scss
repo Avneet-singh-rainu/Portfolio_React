@@ -1,0 +1,94 @@
+.projects{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: 45px;
+    position: relative;
+    height: 100%;
+    
+
+
+    .grid{
+        position: absolute;
+        bottom: 0px;
+        height: 60%;
+        width: 100%;
+        display: grid ;
+        grid-template-columns: auto auto auto auto ;
+
+   .card{
+    overflow: hidden;
+    margin: 10px auto;
+    margin-bottom: 60px;
+    width: 18vw;
+    height: 29vh;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    border-radius: 5px;
+    padding: 10px;
+    color: rgb(7, 6, 6);
+    background: rgb(243, 238, 238);
+
+
+    .projectimage{
+      align-self: center;
+      margin-top: -10px;
+      
+      
+        
+        img{
+            object-fit: cover;
+            width: 500px;
+            height: 200px;
+   
+            
+
+        }
+
+      
+    }
+.desc{
+    display: flex;
+    flex-direction: column;
+    font-size: 15px;
+    position: relative;
+    height: 100%;
+
+
+    h1{
+        font-size: 25px;    
+
+        margin-bottom: 40px;
+        
+    }
+
+    .githubbtn{
+        justify-self: center;
+        background: orange;
+        border: none;
+        border-radius: 15px;
+        width: 150px;
+        height: 45px;
+        padding: 10px;
+        align-self: center;
+        position: absolute;
+        bottom: 0px;
+ }
+}
+   }
+
+
+   .card:hover{
+       transition:  0.7s ease-in-out;
+       transform: scale(1.2,1.1 );  
+       height: 500px;  
+
+
+
+   }
+
+    }
+
+
+}

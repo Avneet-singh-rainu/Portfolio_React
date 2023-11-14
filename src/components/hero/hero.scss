@@ -1,0 +1,71 @@
+.hero {
+  height: calc(100vh - 100px);
+  overflow: hidden;
+  background: linear-gradient(180deg, #0c0c1d, #111132);
+  position: relative;
+  z-index: -1;
+  
+  .heroimg
+    {
+      position: absolute;
+      right:0;
+      top: 0;
+    }
+  .wrapper 
+    {
+    max-width: 1366px;
+    height: 100%;
+    margin: auto;
+    
+    .techstack{
+
+      img{
+        align-self: center;
+        height:auto;
+        width:100px;
+      }
+
+      display: grid !important;
+      grid-template-columns: 120px 120px 120px 0px;
+      gap: 50px;
+    
+    }
+
+
+    .textcontainer
+    {
+        
+      width: 50%;
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      gap: 40px;       
+        
+       h2 {
+        font-size: 30px;
+        color: rebeccapurple;
+        letter-spacing: 10px;
+    }
+
+      h1 {
+        font-size: 88px;
+
+       
+        }
+
+    }
+    }
+
+
+  .slidingtext {
+    position: absolute;
+    font-size: 50vh;
+    bottom: -120px;
+    white-space: nowrap;
+    color: #ffffff09;
+    width: 50%;
+    font-weight: bold;
+  }
+
+}
