@@ -1,4 +1,4 @@
-import "./App.css";
+import "./App.scss";
 import { Navbar } from "./components/Navbar/Navbar";
 import Contact from "./components/contact/Contact";
 import { Hero } from "./components/hero/hero";

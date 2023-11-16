@@ -5,7 +5,7 @@ import { motion } from "framer-motion";
 
 const variant = {
   initial: {
-    x: -500,
+    x: -100,
     opacity: 0,
   },
   animate: {
@@ -20,15 +20,15 @@ const variant = {
 };
 
 export const Project = () => {
+  const handleCilck = (id) => {
+    const link = data.filter((user) => {
+      return user.id === id;
+    });
 
-  const handleCilck=(id)=>{
+    const [{ ide, imgage, name, tech, url }] = link;
 
-   const link = data.filter((user) => {return user.id===id});
-
-   const[{ide,imgage,name,tech,url}]=link
-
-   window.location.replace(url);
-  }
+    window.location.replace(url);
+  };
   return (
     <div className="projects">
       <motion.h1 variants={variant} initial="initial" whileInView="animate">
@@ -41,11 +41,11 @@ export const Project = () => {
               {data.map((project) => {
                 return (
                   <motion.div
-                  key={project.id}
+                    key={project.id}
                     className="card"
                     variants={variant}
                     initial="initial"
-                    animate="animate"
+                    whileInView="animate"
                   >
                     <div className="projectimage">
                       <img src={project.image} alt="image" />
@@ -54,16 +54,28 @@ export const Project = () => {
                       <h1>{project.name}</h1>
                       {project.tech.map((tech) => {
                         return (
-                          <ul style={{ paddingLeft: "20px" }}>
+                          <motion.ul
+                            variants={variant}
+                            initial="initial"
+                            whileInView="animate"
+                            style={{ paddingLeft: "20px" }}
+                          >
                             <li
-                              style={{ fontSize: "20px", marginBottom: "5px" }}
+                              style={{ fontSize: "15px", marginBottom: "5px" }}
                             >
                               {tech}
                             </li>
-                          </ul>
+                          </motion.ul>
                         );
                       })}
-                      <button className="githubbtn" onClick={()=>{handleCilck(project.id)}}>Github</button>
+                      <button
+                        className="githubbtn"
+                        onClick={() => {
+                          handleCilck(project.id);
+                        }}
+                      >
+                        Github
+                      </button>
                     </div>
                   </motion.div>
                 );

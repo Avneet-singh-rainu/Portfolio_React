@@ -48,7 +48,7 @@ const Contact = () => {
       className="contact"
       variants={variants}
       initial="initial"
-      whileInView="animate"
+      animate="animate"
     >
       <motion.div className="textContainer" variants={variants}>
         <motion.h1 variants={variants}>Let’s work together</motion.h1>
